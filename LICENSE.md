@@ -1,6 +1,13 @@
+---
+
+# ✅ **NEW LICENSE.md (ready to paste)**
+
+This keeps MIT but updates ownership.
+
+```md
 MIT License
 
-Copyright (c) 2023 mickasmt
+Copyright (c) 2025 Sree
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
