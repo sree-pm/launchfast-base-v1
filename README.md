@@ -70,29 +70,29 @@ Prisma, Typescript, sensible structure, clean patterns, and CLI shortcuts.
 
 Clone and create a new project using this repo:
 
-```bash
+```sh
 npx create-next-app my-saas --example "https://github.com/sree-pm/launchfast-base-v1"
-
-Or
-
-## Deploy instantly on Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/sree-pm/launchfast-base-v1)
+```
+Or Deploy instantly on Vercel : [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/sree-pm/launchfast-base-v1)
 
 ---
 
-## Local Setup
+## LocalSetup
 
 1. Install dependencies  
-   ```sh
+```sh
    pnpm install
-
+```
 2. Copy environment variables  
-   ```sh
+```sh
    cp .env.example .env.local
+```
 3. Run development server  
-   ```sh
+```sh
    pnpm dev
+```
+
+---
 
 ## Stack
 
