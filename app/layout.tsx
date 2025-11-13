@@ -1,5 +1,7 @@
 import "@/styles/globals.css";
 
+import * as Sentry from "@sentry/nextjs";
+
 import { fontGeist, fontHeading, fontSans, fontUrban } from "@/assets/fonts";
 import { SessionProvider } from "next-auth/react";
 import { ThemeProvider } from "next-themes";
@@ -14,7 +16,12 @@ interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-export const metadata = constructMetadata();
+export const metadata = {
+  ...constructMetadata(),
+  other: {
+    ...Sentry.getTraceData(),
+  },
+};
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
