@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 
 import * as Sentry from "@sentry/nextjs";
+import { PostHogProvider } from "@/components/providers/posthog-provider";
 
 import { fontGeist, fontHeading, fontSans, fontUrban } from "@/assets/fonts";
 import { SessionProvider } from "next-auth/react";
@@ -43,10 +44,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
             enableSystem
             disableTransitionOnChange
           >
-            <ModalProvider>{children}</ModalProvider>
-            <Analytics />
-            <Toaster richColors closeButton />
-            <TailwindIndicator />
+            <PostHogProvider>
+              <ModalProvider>{children}</ModalProvider>
+              <Analytics />
+              <Toaster richColors closeButton />
+              <TailwindIndicator />
+            </PostHogProvider>
           </ThemeProvider>
         </SessionProvider>
       </body>
