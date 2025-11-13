@@ -1,70 +1,95 @@
-sree@Srees-iMac launchfast-base-v1 % git add README.md LICENSE.md
-sree@Srees-iMac launchfast-base-v1 % git status
-On branch main
-Your branch is up to date with 'origin/main'.
+LaunchFast – AI-Native SaaS Boilerplate
 
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        modified:   LICENSE.md
-        modified:   README.md
+Overview
+LaunchFast is a production-grade starter kit for builders who want to ship an AI SaaS fast without fighting setup, configuration, analytics, billing, or security.
 
-sree@Srees-iMac launchfast-base-v1 % git commit -m "Update README and license for LaunchFast branding"
-[main 1941f98] Update README and license for LaunchFast branding
- 2 files changed, 100 insertions(+), 87 deletions(-)
-sree@Srees-iMac launchfast-base-v1 % git push origin main
-Enumerating objects: 7, done.
-Counting objects: 100% (7/7), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (4/4), done.
-Writing objects: 100% (4/4), 1.95 KiB | 1.95 MiB/s, done.
-Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-To https://github.com/sree-pm/launchfast-base-v1.git
-   37ed03f..1941f98  main -> main
-sree@Srees-iMac launchfast-base-v1 % git add .
-git status
-git commit -m “Update README to plain-text format”
-git push origin main
-On branch main
-Your branch is up to date with 'origin/main'.
+This boilerplate includes:
+	•	SaaS membership
+	•	Authentication
+	•	Stripe subscriptions
+	•	Admin dashboard scaffold
+	•	User dashboard scaffold
+	•	AI analytics instrumentation
+	•	Sentry error tracking
+	•	PostHog events, Web Analytics, session replay
+	•	Modern Shadcn UI
+	•	Email flows
+	•	Secure Prisma + Neon schema
 
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        modified:   README.md
+Everything is wired, tested, and ready so you can focus on your product.
 
-error: pathspec 'README' did not match any file(s) known to git
-error: pathspec 'to' did not match any file(s) known to git
-error: pathspec 'plain-text' did not match any file(s) known to git
-error: pathspec 'format”' did not match any file(s) known to git
-To https://github.com/sree-pm/launchfast-base-v1.git
- ! [rejected]        main -> main (fetch first)
-error: failed to push some refs to 'https://github.com/sree-pm/launchfast-base-v1.git'
-hint: Updates were rejected because the remote contains work that you do not
-hint: have locally. This is usually caused by another repository pushing to
-hint: the same ref. If you want to integrate the remote changes, use
-hint: 'git pull' before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-sree@Srees-iMac launchfast-base-v1 % git add .
-git status
-git commit -m “Update README to plain-text format”
-git push origin main
-On branch main
-Your branch is up to date with 'origin/main'.
+Features
 
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        modified:   README.md
+AI-native analytics
+LLM event tracking, usage logging, funnels, session replay.
 
-error: pathspec 'README' did not match any file(s) known to git
-error: pathspec 'to' did not match any file(s) known to git
-error: pathspec 'plain-text' did not match any file(s) known to git
-error: pathspec 'format”' did not match any file(s) known to git
-To https://github.com/sree-pm/launchfast-base-v1.git
- ! [rejected]        main -> main (fetch first)
-error: failed to push some refs to 'https://github.com/sree-pm/launchfast-base-v1.git'
-hint: Updates were rejected because the remote contains work that you do not
-hint: have locally. This is usually caused by another repository pushing to
-hint: the same ref. If you want to integrate the remote changes, use
-hint: 'git pull' before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-sree@Srees-iMac launchfast-base-v1 % 
+Billing and subscriptions
+Stripe monthly and yearly plans built-in.
+
+Authentication
+Google OAuth, email login, sessions, protected routes.
+
+Production monitoring
+Sentry errors, performance tracing, correlation.
+
+Full PostHog analytics
+Web analytics, heatmaps, session replay, funnels, feature usage.
+
+Modern UI system
+Shadcn/UI, Radix, Tailwind CSS, Framer Motion, Lucide icons.
+
+Developer-friendly
+Prisma, Typescript, clean structure, predictable patterns.
+
+Installation
+
+Create a new project:
+npx create-next-app my-saas –example “https://github.com/sree-pm/launchfast-base-v1”
+
+Local Setup
+	1.	Install dependencies:
+pnpm install
+	2.	Copy environment variables:
+cp .env.example .env.local
+	3.	Start dev server:
+pnpm dev
+
+Tech Stack
+
+Frameworks:
+Next.js 14
+Typescript
+Prisma ORM
+Auth.js v5
+
+Infrastructure:
+Neon (Postgres)
+Vercel
+Resend
+
+AI, analytics, monitoring:
+PostHog (events, web analytics, session replay, heatmaps)
+Sentry (errors, performance, traces)
+
+UI:
+Tailwind CSS
+Shadcn/UI
+Radix UI
+Framer Motion
+Lucide Icons
+
+Roadmap:
+	•	CEO analytics dashboard
+	•	AI usage guardrails
+	•	Role-based admin panel
+	•	Multi-tenant mode
+	•	Full onboarding funnels
+	•	Email sequences for SaaS lifecycle
+	•	Deployable AI agents toolkit
+
+License:
+MIT License. See LICENSE for details.
+
+Credits:
+Inspired by shadcn’s Taxonomy, Steven Tey’s Precedent, and many open-source SaaS starters.
+Rebuilt, extended, and production-hardened for the LaunchFast ecosystem.
